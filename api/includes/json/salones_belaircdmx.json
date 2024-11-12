@@ -1,0 +1,204 @@
+{
+    "type_users": {
+        "name": "type_users",
+        "id": "id_type_users",
+        "columns": {
+            "id_type_users": {
+                "name": "id_type_users",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+    "type_styles": {
+        "name": "type_styles",
+        "id": "id_type_styles",
+        "columns": {
+            "id_type_styles": {
+                "name": "id_type_styles",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+
+    "type_status": {
+        "name": "type_status",
+        "id": "id_type_status",
+        "columns": {
+            "id_type_status": {
+                "name": "id_type_status",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+
+    "salones": {
+        "name": "salones",
+        "id": "id_salones",
+        "columns": {
+            "id_salones": {
+                "name": "id_salones",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+
+    "eventos": {
+        "name": "eventos",
+        "id": "id_eventos",
+        "columns": {
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+
+    "users": {
+        "name": "users",
+        "id": "id_users",
+        "columns": {
+            "id_users": {
+                "name": "id_users",
+                "var": "i",
+                "default": true
+            },
+            "id_type_users": {
+                "name": "id_type_users",
+                "var": "i"
+            },
+            "username": {
+                "name": "username",
+                "var": "s"
+            },
+            "password": {
+                "name": "password",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+
+    "itinerario": {
+        "name": "itinerario",
+        "id": "id_itinerario",
+        "columns": {
+            "id_itinerario": {
+                "name": "id_itinerario",
+                "var": "i",
+                "default": true
+            },
+            "id_salones": {
+                "name": "id_salones",
+                "var": "i"
+            },
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i"
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "date": {
+                "name": "date",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    },
+
+    "eventos_info": {
+        "name": "eventos_info",
+        "id": "id_evento_info",
+        "columns": {
+            "id_evento_info": {
+                "name": "id_evento_info",
+                "var": "i",
+                "default": true
+            },
+            "id_type_status": {
+                "name": "id_type_status",
+                "var": "i"
+            },
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i"
+            },
+            "id_salones": {
+                "name": "id_salones",
+                "var": "i"
+            },
+            "name": {
+                "name": "name",
+                "var": "s"
+            },
+            "date": {
+                "name": "date",
+                "var": "s"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default":true
+            }
+        }
+    }
+}

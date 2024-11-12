@@ -1,0 +1,28 @@
+###
+POST http://localhost/web/admin_ba_services/apis/login/ HTTP/1.1
+content-type: application/json
+
+    # "action":"login",
+{
+    "username":"aux_develop",
+    "password":"root"
+}
+
+###
+POST http://localhost/web/salones_belaircdmx_com/api/salones/ HTTP/1.1
+content-type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzI4MTU3NDY2fQ.UCwlSDCo_HDU0H27JWJYUETEOB61L9Tz-hL9t__9oX0",
+    "action": "select",
+    "table": "salones"
+}
+
+###
+POST http://localhost/web/salones_belaircdmx_com/api/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username":"aux_develop",
+    "password":"root"
+}

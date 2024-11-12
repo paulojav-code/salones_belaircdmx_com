@@ -1,0 +1,30 @@
+#login{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    padding: 2em;
+    & article{
+        display: flex;
+        justify-content: center;
+        width: 33%;
+    }
+    & .user{
+        input{
+            border-radius: 0.5em;
+            width: 50%;
+        }
+        label{
+            padding: 0.25em;
+        }
+    }
+    
+    & #login_button{
+        width: 35%;
+        border-radius: 0.5em;
+    }
+    & #login_button:hover{
+        cursor: pointer;
+        background-color: aliceblue;
+    }
+
+}
