@@ -1,0 +1,62 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{-webkit-text-size-adjust:none}mark{background-color:transparent;color:inherit}input::-moz-focus-inner{border:0;padding:0}input,select,textarea{-moz-appearance:none;-webkit-appearance:none;-ms-appearance:none;appearance:none}@-ms-viewport{width:device-width}body{-ms-overflow-style:scrollbar}@media screen and (max-width:480px){body,html{min-width:320px}}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body *{-webkit-tap-highlight-color:transparent}
+body,input,button,select,textarea{font-family:'Poppins',sans-serif;font-size:16px;font-weight:300;line-height:1.25em;letter-spacing:0.015em;}@media screen and (max-width: 1680px){body,input,button,select,textarea{font-size:16px;}}@media screen and (max-width: 1280px){body,input,button,select,textarea{font-size:14px}}
+
+:root{
+    --amarillo:#DEAA79 ;
+    --naranja:  #DEAA79 ;
+    --verde_claro:  #3b7f42 ;
+    --verde:#659287;
+    --verde_obscuro:  #659287 ;
+    --azul:#132743;
+    --red:#D7385E;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    & .card{
+        display: flex;
+        width: 47.5%;
+        height: 17em;
+        justify-content: center;
+        padding: 1em;
+        margin: 2em 1em 0 1em;
+        border-radius: 2em;
+        flex-wrap: wrap;
+        color: #000000e8;
+        & h2{
+            font-size: 3em;
+            margin-top: 0.5em;
+        }
+        & .butons{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 5em;
+            & a{
+                color: #000000;
+            }
+            & i{
+                font-size: 3em;
+                border: solid #000000 2px;
+                padding: 0.25em;
+                border-radius: 0.25em;
+            }
+            & i:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+    & .c0{
+        background-color: var(--naranja);
+    }
+    & .c1{
+        background-color: var(--amarillo);
+    }
+    & .c2{
+        background-color: var(--verde_obscuro);
+    }
+    & .c3{
+        background-color: var(--verde);
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "eventos":{
+        "titulo":"Eventos"
+        }
+    },
+    {
+        "itinerario":{
+            "titulo":"Itinerario"
+        }
+    },
+    {
+        "salones":{
+            "titulo":"Salones"
+        }
+    },
+    {
+        "usuarios":{
+            "titulo":"Usuarios"
+        }
+    }
+]

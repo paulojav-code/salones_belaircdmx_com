@@ -23,7 +23,7 @@
         $json = [
             'salones' => 'salones_belaircdmx.json'
         ];
-        $tables = json_decode(file_get_contents('../includes/json/'.$json[$j]),1);
+        $tables = json_decode(file_get_contents('../includes/json/salones_belaircdmx.json'),1);
 
         if(isset($tables[$t])){
             return $tables[$t];

@@ -1,0 +1,52 @@
+
+
+#modal_f {
+    width: 50em;
+    border: none;
+    border-radius: 2em;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    */
+    text-align: center;
+}
+#modal_f .header_desc {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+}
+#modal_f .form_table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#modal_f article{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1em;
+    & label{
+        width: 100%;
+    }
+    & input{
+        width: 100%;
+        border: 2px #000 solid;
+        border-radius: 0.5em;
+    }
+}
+.modal_buttons{
+    & button{
+        margin: 0.5em;
+        border-radius: 0.5em;
+        width: 15%;
+    }
+    & button:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+    & .cancelar{
+        background-color: #fff;
+    }
+    & .enviar{
+        background-color: #fff;
+    }
+}

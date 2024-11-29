@@ -15,6 +15,7 @@ export function page_login(){
         </article></section>`;
 
     document.querySelector(`#login_button`).addEventListener('click',async function(){
+        console.log(URL_API_LOGIN)
         let res = await request_api({
             url:URL_API_LOGIN,
             json:{
@@ -24,6 +25,7 @@ export function page_login(){
         });
         localStorage.setItem(LS_VAR_LOGIN, JSON.stringify(res));
         location.reload();
+        
     });
 }
 

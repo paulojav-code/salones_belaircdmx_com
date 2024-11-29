@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     font-size: 1.5em;
     padding: 2em;
+    height: 5em;
     & article{
         display: flex;
         justify-content: center;
@@ -27,4 +28,8 @@
         background-color: aliceblue;
     }
 
+}
+.content{
+    justify-content: center;
+    align-items: center;
 }
