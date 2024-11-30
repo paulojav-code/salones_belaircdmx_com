@@ -1,7 +1,9 @@
-import { LS_VAR_LOGIN } from "./const.js";
+import { LS_VAR_LOGIN, SERVICES_LIST } from "./const.js";
 import { page_login, jwt_valid } from "./pages/login.js";
 import { headerComponent } from "./components/header.js";
-import { create_card } from './components/cards.js';
+import { mainCards } from './components/cards.js';
+import { contentComponent } from "./components/content.js";
+import { modalsComponent, modalForm } from "./components/modals.js";
 // import { MODAL_DESC,MODAL_FORM,MODAL_NEW} from "../components/modales.js"
 
 let jwt = JSON.parse(localStorage.getItem(LS_VAR_LOGIN));
@@ -22,11 +24,21 @@ export async function start_page(){
         title:`Servicios`
     });
 
-    let services_list = [
-        {title:'Itinerario',url:'./itinerario/',class_name:'itinerario'},
-        {title:'Eventos',url:'./eventos/',class_name:'eventos'},
-        {title:'Salones',url:'./salones/',class_name:'salones'},
-        {title:'Usuarios',url:'./usuarios/',class_name:'usuarios'}
-    ];
-    await create_card(services_list);
+    let cards = mainCards(SERVICES_LIST);
+
+    contentComponent({
+        content: `${cards.content}`,
+        events: () => {
+            cards.events();
+        }
+    })
+
+    let modal_form = modalForm({});
+
+    modalsComponent({
+        content: `${modal_form.content}`,
+        events: () => {
+            modal_form.events();
+        }
+    });
 }
