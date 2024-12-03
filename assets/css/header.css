@@ -71,6 +71,7 @@ h3{
     background-color: var(--verde_claro);
 }
 header{
+    width: 100%;
     background-color: var(--verde_claro);
     color: #000;
 }

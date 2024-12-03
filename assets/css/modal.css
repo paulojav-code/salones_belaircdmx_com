@@ -13,6 +13,7 @@
     display: flex;
     justify-content: end;
     gap: 1em;
+    background-color: #fff;
 }
 #modal_f .form_table{
     display: flex;
@@ -43,10 +44,29 @@
         cursor: pointer;
         transform: scale(1.05);
     }
-    & .cancelar{
-        background-color: #fff;
-    }
-    & .enviar{
-        background-color: #fff;
+}
+.cancel{
+    background-color: #fff;
+    margin: 0.5em;
+    width: 5em;
+}
+.send{
+    background-color: #fff;
+    margin: 0.5em;
+    width: 5em;
+}
+.cancel:hover{
+    cursor: pointer;
+}
+.send:hover{
+    cursor: pointer;
+    
+}
+#modal_f header{
+    display: flex;
+    background-color: #fff;
+    justify-content: end;
+    & .close:hover{
+        cursor: pointer;
     }
 }

@@ -15,7 +15,7 @@ export function page_login(){
         </article></section>`;
 
     document.querySelector(`#login_button`).addEventListener('click',async function(){
-        console.log(URL_API_LOGIN)
+        // console.log(URL_API_LOGIN)
         let res = await request_api({
             url:URL_API_LOGIN,
             json:{

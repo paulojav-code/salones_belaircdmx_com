@@ -29,7 +29,14 @@
     }
 
 }
+#main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .content{
     justify-content: center;
-    align-items: center;
+    margin-top: 2em;
+    width: 85%;
 }

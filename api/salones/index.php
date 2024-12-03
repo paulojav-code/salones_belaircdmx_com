@@ -8,6 +8,8 @@
     include_once('../includes/php/functions.php');
 
     $json = json_decode(file_get_contents('php://input'),1);
+    // echo json_encode($json);
+    // $json = $_REQUEST;
 
     if(!isset($json['action'])){
         echo json_encode(['error'=>'01','msg'=>'action no definida.']);

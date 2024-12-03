@@ -1,14 +1,15 @@
 import { URL_API_LOGIN } from "./const.js";
-
 export async function request_api({url,json}){
+    console.log(url)
     let req = await fetch(url,{
         method:"POST",
         headers: {"Content-type": "application/json;"},
         body: JSON.stringify(json)
     });
     let res = await req.text();
+    // console.log(res);
     let data = JSON.parse(res);
-
+    
     if(url != URL_API_LOGIN && typeof data.login !== 'undefined' && data.login === false){
         alert_msg({
             msg:'sesion expirada'

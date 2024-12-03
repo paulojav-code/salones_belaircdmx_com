@@ -3,9 +3,9 @@ POST http://localhost/web/salones_belaircdmx_com/api/salones/ HTTP/1.1
 content-type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzMyOTA3NjEwfQ.F8MY2ZJxTuovBXWPr2ZAGDjCt1s0e5UHq3Ert5u1lug",
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzMzMjYxMTgzfQ.Jcc9AOxBmfsEaUBiBSlVP-gjmg-ObA8-oPCKeDz53qE",
     "action": "select",
-    "table": "salones"
+    "table": "itinerario"
 }
 
 ###

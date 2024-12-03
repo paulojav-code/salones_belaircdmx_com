@@ -1,0 +1,36 @@
+#tab_titles{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    #name_cel{
+        display: flex;
+        width: 5.5em;
+        font-size: 1.75em;
+        border: solid 1px #000;
+        justify-content: center;
+        height: 2em;
+        align-items: center;
+    }
+}
+#itinerario_content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2em;
+    & .sec_itinerario{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & .tab_cel{
+            display: flex;
+            width: 7.70em;
+            font-size: 1.25em;
+            border: solid 1px #000;
+            justify-content: center;
+            height: 2.5em;
+            align-items: center;
+        }
+    }
+}

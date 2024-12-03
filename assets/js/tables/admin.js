@@ -1,9 +1,11 @@
 import { TAB_SALONES } from "./salones.js";
 import { TAB_EVENTOS } from "./eventos.js";
 import { TAB_USUARIOS } from "./users.js";
+import { TAB_ITINERARIO } from "./itinerario.js"
 
 export const ADMIN = {
     'eventos':TAB_EVENTOS,
     'salones':TAB_SALONES,
     'usuarios':TAB_USUARIOS,
+    'itinerario':TAB_ITINERARIO
 }

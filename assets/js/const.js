@@ -3,6 +3,7 @@ const IN_PRODUCTION = window.location.host!='localhost';
 export const LS_VAR_LOGIN = `salones_belaircdmx_com_login`;
 
 const URL_API = `http://localhost/web/salones_belaircdmx_com/api/`;
+export const LS_VAR_ITINERARIO = `${URL_API}salones/`;
 export const URL_API_LOGIN = `${URL_API}login/`;
 
 export const TEMP_URL_ROOT_IMG = `../assets/img/pages/`;

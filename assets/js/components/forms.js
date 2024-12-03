@@ -1,6 +1,7 @@
 import { LS_VAR_LOGIN } from "../const.js";
 import { ADMIN } from "../tables/admin.js";
 import { open_modal, close_modals } from './modals.js';
+import { request_api } from "../utils.js";
 
 let jwt = JSON.parse(localStorage.getItem(LS_VAR_LOGIN));
 
@@ -16,11 +17,11 @@ export async function formAdminComponent({table,modal}){
         close_modals(modal)
     });
 
-    document.querySelector(`#${modal} .send`).addEventListener('click',function(){
+    document.querySelector(`#${modal} .send`).addEventListener('click', async function(){
         let json = {
             token: jwt.token,
-            tab:tab.name,
             action:"insert",
+            table:tab.name,
             columns:{}
         }
 
@@ -28,8 +29,9 @@ export async function formAdminComponent({table,modal}){
             let i = e.id.split('-')[1];
             json.columns[i] = e.value;
         });
-
-        console.log(json);
+        console.log(await request_api({url:'./api/salones',json:json}))
+        // let response = await res.json()
+        // console.log(response);
     });
 
     open_modal(modal);
