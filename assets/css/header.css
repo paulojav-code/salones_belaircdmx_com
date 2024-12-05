@@ -6,12 +6,14 @@
     --verde_obscuro:  #66af91 ;
 }
 h3{
+    display: flex;
     font-size: 2.5em;
+    align-items: center;
 }
 .bt_back_container{
     width: 5%;
 }
-#button_back{
+#button_menu{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +22,19 @@ h3{
     background-color: var(--naranja);
     margin-left: 0.5em;
 }
-#button_back :hover{
+#button_menu :hover{
+    cursor: pointer;
+}
+#back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    border-radius: 0.25em;
+    background-color: var(--naranja);
+    margin-left: 0.5em;
+}
+#back:hover{
     cursor: pointer;
 }
 .users_info label span{
@@ -60,18 +74,38 @@ h3{
     padding-left: 1em;
     width: 50%;
 }
+.hide{
+    display: none !important;
+}
 #button_new_container{
     display: flex;
     align-items: center;
+    justify-content: end;
 }
-#button_new{
+#button_new_container{
     font-size: 1.25em;
     margin-left: 1em;
     border-radius: 0.5em;
-    background-color: var(--verde_claro);
+    width: 17em;
+    & button{
+        width: 7.5em;
+        height: 1.75em;
+        background-color: var(--verde_claro);
+        border: solid 2px #000;
+        border-radius: 0.5em;
+        font-size: 1.25em;
+    }
+    & button:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
 }
 header{
     width: 100%;
     background-color: var(--verde_claro);
     color: #000;
 }
+/* .show{
+    display: block;
+} */
+

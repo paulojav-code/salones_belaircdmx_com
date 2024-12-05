@@ -31,6 +31,7 @@
         exit();
     }
     $table = get_table($json['table'],$type_api);
+    // echo json_encode($table);
     
     if($table == []){
         echo json_encode(['error'=>'05','msg'=>'tabla no existe']);

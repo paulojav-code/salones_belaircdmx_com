@@ -130,16 +130,17 @@
         if(isset($res['error'])){
             return $res;
         }else{
-            set_audit($con,$s,$j,$user);
-            return ['query'=>'insert','table'=>$t['name']];
+            // set_audit($con,$s,$j,$user);
+            // return ['query'=>'insert','table'=>$t['name']];
         }
     }
     function query_update($con,$s,$user,$t,$j){
+        
         $res = [];
         $values = [];
         $params = [''];
-
-        if(!isset($j[$t['id']])||$j[$t['id']]==''){
+        
+        if(!isset($j['id'])||$j['id']==''){
             return ['error'=>'id no existe'];   
         }
         foreach($t['columns'] as $i){
@@ -151,22 +152,23 @@
                 }
             }
         }
+        echo json_encode($params);
         if($values==[]){
             return ['error'=>'parametros faltantes'];   
         }
 
         $params[0] .= 'i';
-        $params[] = &$j[$t['id']];
+        $params[] = &$j['columns'][$t['id']];
 
         $sql = 'UPDATE '.DATABASE_NAME.'.`'.$t['name'].'` SET '.implode(', ',$values).' WHERE '.$t['id'].' = ?;';
-
+        
         $res = query($con,$sql,$params);
-
+        
         if(isset($res['error'])){
             return $res;
         }else{
-            set_audit($con,$s,$j,$user);
-            return ['query'=>'update','table'=>$t['name']];
+            // set_audit($con,$s,$j,$user);
+            // return ['query'=>'update','table'=>$t['name']];
         }
     }
     function query_delete($con,$s,$user,$t,$j){
@@ -186,19 +188,20 @@
         }
 
         $sql = 'UPDATE '.DATABASE_NAME.'.`'.$t['name'].'` SET `active`='.$active.' WHERE '.$t['id'].' = ?;';
-        $params = ['i',&$j['id']];
+        $params = ['i',&$j['columns'][$t['id']]];
         $res = query($con,$sql,$params);
-    
+        echo json_encode($params);
         if(isset($res['error'])){
             return $res;
-        }else{
-            set_audit($con,$s,$j,$user);
-            return ['query'=>'delete','table'=>$t['name']];
         }
+        // else{
+        //     set_audit($con,$s,$j,$user);
+        //     return ['query'=>'delete','table'=>$t['name']];
+        // }
     }
-    function set_audit($con,$s,$d,$u){
-        unset($d['token']);
-        $a = json_encode($d);
-        query($con,'INSERT INTO '.DATABASE_SERVICES.'.audits(`id_users`,`id_type_services`,`request`,`date`) VALUES (?,?,?,NOW());',['iis',&$u['id_users'],&$s,&$a]);
-    }
+    // function set_audit($con,$s,$d,$u){
+    //     unset($d['token']);
+    //     $a = json_encode($d);
+    //     query($con,'INSERT INTO '.DATABASE_SERVICES.'.audits(`id_users`,`id_type_services`,`request`,`date`) VALUES (?,?,?,NOW());',['iis',&$u['id_users'],&$s,&$a]);
+    // }
 ?>

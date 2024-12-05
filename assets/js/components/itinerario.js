@@ -1,6 +1,6 @@
 import { TAB_ITINERARIO } from "../tables/itinerario.js";
 import { request_api } from "../utils.js";
-import { LS_VAR_LOGIN,LS_VAR_ITINERARIO } from "../const.js";
+import { LS_VAR_LOGIN,URL_API_LOGIN_SALONES } from "../const.js";
 
 let jwt = JSON.parse(localStorage.getItem(LS_VAR_LOGIN));
 console.log(jwt)
@@ -23,7 +23,7 @@ export async function intinerarioComponent(){
         action:"select"
     };
     // con lo que me responde la api creo la tabla utilizando map para reccorre e impirmir la respuesta de la api 
-    let response = await request_api({url:LS_VAR_ITINERARIO,json:json})
+    let response = await request_api({url:URL_API_LOGIN_SALONES,json:json})
     document.querySelector("#itinerario_content").innerHTML =response.map(res => {
         return `<section class="sec_itinerario">${Object.values(res).map(r =>{
             return `<div class="tab_cel">${r}</div>`

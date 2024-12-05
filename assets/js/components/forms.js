@@ -1,12 +1,18 @@
-import { LS_VAR_LOGIN } from "../const.js";
+import { LS_VAR_LOGIN,URL_API_LOGIN_SALONES } from "../const.js";
 import { ADMIN } from "../tables/admin.js";
 import { open_modal, close_modals } from './modals.js';
 import { request_api } from "../utils.js";
 
 let jwt = JSON.parse(localStorage.getItem(LS_VAR_LOGIN));
 
-export async function formAdminComponent({table,modal}){
+export async function formAdminComponent({table,modal,action}){
+    let action_list = {
+        "add":"insert",
+        "edit":'update',
+        "del":"delete"
+    }
     let tab = ADMIN[table];
+    let act = action_list[action]
     let body = Object.keys(tab.columns).map(c => {
         return `<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
     }).join('');
@@ -19,19 +25,20 @@ export async function formAdminComponent({table,modal}){
 
     document.querySelector(`#${modal} .send`).addEventListener('click', async function(){
         let json = {
+            id:tab.id,
             token: jwt.token,
-            action:"insert",
+            action:act,
             table:tab.name,
             columns:{}
         }
-
-        document.querySelectorAll(`#${modal} .form_table .input_form`).forEach(e => {
+        // console.log(json)
+        document.querySelectorAll(`#${modal} .form_table .input_form`). forEach  (e => {
             let i = e.id.split('-')[1];
             json.columns[i] = e.value;
         });
-        console.log(await request_api({url:'./api/salones',json:json}))
-        // let response = await res.json()
-        // console.log(response);
+        let res = await request_api({url:URL_API_LOGIN_SALONES,json:json})
+        let response = await res.json()
+        console.log(response);
     });
 
     open_modal(modal);

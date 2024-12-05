@@ -10,12 +10,12 @@ export async function request_api({url,json}){
     // console.log(res);
     let data = JSON.parse(res);
     
-    if(url != URL_API_LOGIN && typeof data.login !== 'undefined' && data.login === false){
-        alert_msg({
-            msg:'sesion expirada'
-        });
-        location.reload();
-    }
+    // if(url != URL_API_LOGIN && typeof data.login !== 'undefined' && data.login === false){
+    //     alert_msg({
+    //         msg:'sesion expirada'
+    //     });
+    //     location.reload();
+    // }
 
     return data;
 }
