@@ -2,7 +2,7 @@ export const TAB_TYPE_STATUS = {
     name: "type_status",
 	id: "id_type_status",
 	title: {
-		table: "Estatus",
+		table: "Tipo de Estatus",
 		insert: "Nuevo Estatus",
 		update: "Modificar Estatus"
 	},

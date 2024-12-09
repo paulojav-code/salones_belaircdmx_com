@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/modal.css">
     <link rel="stylesheet" href="assets/css/itinerario.css">
+    <link rel="stylesheet" href="assets/css/menu_cards.css">
     <script src="https://kit.fontawesome.com/0b2028ec27.js" crossorigin="anonymous"></script>
 </head>
 

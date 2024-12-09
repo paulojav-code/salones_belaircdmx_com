@@ -1,5 +1,4 @@
 import { LS_VAR_LOGIN,URL_API_LOGIN_SALONES } from "../const.js";
-import { ADMIN } from "../tables/admin.js";
 import { open_modal, close_modals } from './modals.js';
 import { request_api } from "../utils.js";
 
@@ -11,7 +10,8 @@ export async function formAdminComponent({table,modal,action}){
         "edit":'update',
         "del":"delete"
     }
-    let tab = ADMIN[table];
+    
+    let tab = table;
     let act = action_list[action]
     let body = Object.keys(tab.columns).map(c => {
         return `<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
@@ -31,7 +31,7 @@ export async function formAdminComponent({table,modal,action}){
             table:tab.name,
             columns:{}
         }
-        // console.log(json)
+        console.log(json)
         document.querySelectorAll(`#${modal} .form_table .input_form`). forEach  (e => {
             let i = e.id.split('-')[1];
             json.columns[i] = e.value;

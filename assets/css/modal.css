@@ -49,24 +49,50 @@
     background-color: #fff;
     margin: 0.5em;
     width: 5em;
+    border-radius: 0.25em;
 }
 .send{
     background-color: #fff;
     margin: 0.5em;
     width: 5em;
+    border-radius: 0.25em;
 }
 .cancel:hover{
     cursor: pointer;
 }
 .send:hover{
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 #modal_f header{
     display: flex;
     background-color: #fff;
     justify-content: end;
+    & .close{
+        border-radius: 0.25em;
+    }
     & .close:hover{
         cursor: pointer;
+    }
+    & .back_container{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        & .back{
+            border-radius: 0.25em;
+        }
+    }
+    .back:hover{
+        cursor: pointer;  
+    }
+    & .hide{
+        display: none;
+    }
+    & .show{
+        display: flex;
+    }
+    & footer{
+        & button{
+            border-radius: 0.25em;
+        }
     }
 }

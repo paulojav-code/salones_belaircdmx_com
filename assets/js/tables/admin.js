@@ -19,5 +19,4 @@ export const OPTIONS = {
     'type_status':TAB_TYPE_STATUS,
     'type_styles':TAB_TYPE_STYLES,
     'type_users':TAB_TYPE_USERS,
-
 }

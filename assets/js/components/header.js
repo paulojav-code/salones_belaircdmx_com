@@ -1,7 +1,7 @@
 import { SERVICES_LIST } from "../const.js";
-import { mainCards } from './cards.js';
+import { mainCards,card_menu } from './cards.js';
 import { contentComponent } from "./content.js";
-import { modalsComponent, modalForm } from "./modals.js";
+import { modalsComponent, modalForm,open_modal } from "./modals.js";
 export function headerComponent({username,name,title,page,back,add,logo,desc}){
 
     let button_modal = "";
@@ -19,9 +19,8 @@ export function headerComponent({username,name,title,page,back,add,logo,desc}){
     ${button_modal}`
 
     document.querySelector('#button_menu').addEventListener('click',function(){
-        
         let cards = mainCards(SERVICES_LIST);
-
+        console.log(cards)
         contentComponent({
             content: `${cards.content}`,
             events: () => {
@@ -41,8 +40,10 @@ export function headerComponent({username,name,title,page,back,add,logo,desc}){
         document.querySelector('#button_menu').id = "back";
         document.querySelector('#back').addEventListener('click', () => {location.reload();})
         document.querySelector("#button_new_container").classList.remove('hide');
-        document.querySelector("#button_new_container").addEventListener("click",() => {console.log("hola")})
-
+        document.querySelector("#button_new_container").addEventListener("click",() => {
+            card_menu()
+            open_modal('modal_f')
+        })
     })
     document.querySelector(`#button_logout`).addEventListener('click',function(){localStorage.clear();location.reload();});
 }

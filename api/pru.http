@@ -3,9 +3,15 @@ POST http://localhost/web/salones_belaircdmx_com/api/salones/ HTTP/1.1
 content-type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzMzMjYxMTgzfQ.Jcc9AOxBmfsEaUBiBSlVP-gjmg-ObA8-oPCKeDz53qE",
-    "action": "select",
-    "table": "itinerario"
+    "id": "id_type_status",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzMzNzc4MjA2fQ.97IiDXpdgkKzTrpJiLl24nxJ9-qyEIZm40TUIvyA620",
+    "action": "insert",
+    "table": "type_status",
+    "columns": {
+        "id_type_status": "1",
+        "name": "pagado",
+        "active": "1"
+    }
 }
 
 ###

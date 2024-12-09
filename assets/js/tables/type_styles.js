@@ -2,7 +2,7 @@ export const TAB_TYPE_STYLES = {
     name: "type_styles",
 	id: "id_type_styles",
 	title: {
-		table: "Estilos",
+		table: "Tipo de Estilos",
 		insert: "Nuevo Estilo",
 		update: "Modificar Estilo"
 	},
