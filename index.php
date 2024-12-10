@@ -27,7 +27,6 @@
         <header></header>
         <div class="content">
             <section id="tab_titles">
-                
             </section>
         </div>
     </section>

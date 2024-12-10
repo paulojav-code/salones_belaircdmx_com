@@ -31,7 +31,8 @@ export const TAB_ITINERARIO = {
         },
         active:{
             name:"active",
-            title:"Activo"
+            title:"Activo",
+            default: true
         }
     }
 }

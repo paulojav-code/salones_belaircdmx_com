@@ -19,7 +19,8 @@ export const TAB_EVENTOS = {
         },
         active:{
             name:"active",
-            title:"Activo"
+            title:"Activo",
+            default: true
         }
     }
 }

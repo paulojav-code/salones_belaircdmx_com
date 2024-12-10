@@ -7,7 +7,7 @@ export const TAB_EVENTOS_INFO = {
 		update: "Modificar Info de un Evento"
 	},
     columns:{
-        id_eventos:{
+        id_eventos_info:{
             name:"id_eventos_info",
             title:"ID Info Eventos",
             primary: true,
@@ -32,7 +32,8 @@ export const TAB_EVENTOS_INFO = {
         },
         active:{
             name:"active",
-            title:"Activo"
+            title:"Activo",
+            default: true
         }
     }
 }

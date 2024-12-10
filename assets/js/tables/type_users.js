@@ -19,7 +19,8 @@ export const TAB_TYPE_USERS = {
         },
         active:{
             name:"active",
-            title:"Activo"
+            title:"Activo",
+            default: true
         }
     }
 }

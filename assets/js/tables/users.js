@@ -27,7 +27,8 @@ export const TAB_USUARIOS = {
         },
         active:{
             name:"active",
-            title:"Activo"
+            title:"Activo",
+            default: true
         }
     }
 }

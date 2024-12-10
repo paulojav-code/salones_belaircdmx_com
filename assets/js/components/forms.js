@@ -14,7 +14,7 @@ export async function formAdminComponent({table,modal,action}){
     let tab = table;
     let act = action_list[action]
     let body = Object.keys(tab.columns).map(c => {
-        return `<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
+        return tab.columns[c].default == true?"":`<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
     }).join('');
     document.querySelector(`#${modal} .form_table`).innerHTML = body;
     document.querySelector(`#${modal} footer`).innerHTML = `<button class="send">enviar</button><button class="cancel">cancelar</button>`;
