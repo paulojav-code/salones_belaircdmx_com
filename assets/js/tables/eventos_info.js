@@ -19,12 +19,14 @@ export const TAB_EVENTOS_INFO = {
         },
         id_salones:{
             name:"id_salones",
-            title:"ID Salones"
+            title:"ID Salones",
+            select:true
         },
         
         id_type_status:{
             name:"id_type_status",
-            title:"ID Estatus"
+            title:"ID Estatus",
+            select:true
         },
         date:{
             name:"date",

@@ -16,6 +16,7 @@ export const TAB_USUARIOS = {
         id_type_users:{
             name:"id_type_users",
             title:"ID tipo de usuario",
+            select:true
         },
         username:{
             name:"username",

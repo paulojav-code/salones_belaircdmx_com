@@ -20,7 +20,6 @@ export function headerComponent({username,name,title,page,back,add,logo,desc}){
 
     document.querySelector('#button_menu').addEventListener('click',function(){
         let cards = mainCards(SERVICES_LIST);
-        console.log(cards)
         contentComponent({
             content: `${cards.content}`,
             events: () => {

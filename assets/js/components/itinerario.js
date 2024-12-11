@@ -3,7 +3,6 @@ import { request_api } from "../utils.js";
 import { LS_VAR_LOGIN,URL_API_LOGIN_SALONES } from "../const.js";
 
 let jwt = JSON.parse(localStorage.getItem(LS_VAR_LOGIN));
-console.log(jwt)
 
 export async function intinerarioComponent(){
     //LLamo a la tabla para crear los nombres y utilizarla para hacer la petiion a la api

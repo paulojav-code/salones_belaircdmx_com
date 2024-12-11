@@ -1,6 +1,5 @@
 import { URL_API_LOGIN } from "./const.js";
 export async function request_api({url,json}){
-    console.log(url)
     let req = await fetch(url,{
         method:"POST",
         headers: {"Content-type": "application/json;"},
