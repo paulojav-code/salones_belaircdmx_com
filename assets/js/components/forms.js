@@ -22,10 +22,21 @@ export async function formAdminComponent({table,modal,action}){
     console.log(inputs_data)
     let tab = table;
     let act = action_list[action]
+
     // crea los inputs con lo la informacion que trae las tablas de js que se hicieron previamente
     let body = Object.keys(tab.columns).map(c => {
+        console.log(tab.columns[c].name)
+        let input_body = ""
         
-        let input_body = `<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
+        if(tab.columns[c].select == true){
+            input_body = `<div class="select_container"><article><label>${tab.columns[c].title}</label><select id="e-${c}" class="input_form"></select></article></div>`;
+        }
+        else if (tab.columns[c].name == "date") {
+            input_body = `<div><article><label>${tab.columns[c].title}</label><input type="date" id="e-${c}" class="input_form"></input></article></div>`;
+        }
+        else{
+            input_body = `<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
+        }
 
         if(act == "insert" && tab.columns[c].default != true ){
             return input_body
@@ -33,7 +44,11 @@ export async function formAdminComponent({table,modal,action}){
         else if(act == "update" && tab.columns[c].name != "active"){
             return input_body 
         }
+        else if(act == "delete" && tab.columns[c].primary){
+            return input_body 
+        }
     }).join('');
+
     // insrtamos el body en el dom con innerHTML
     document.querySelector(`#${modal} .form_table`).innerHTML = body;
     document.querySelector(`#${modal} footer`).innerHTML = `<button class="send">enviar</button><button class="cancel">cancelar</button>`;
@@ -42,7 +57,7 @@ export async function formAdminComponent({table,modal,action}){
         close_modals(modal)
     });
     document.querySelectorAll(".input_form").forEach(i => {
-        console.log(i.id)
+        // console.log(i.id)
     });
     document.querySelector(`#${modal} .send`).addEventListener('click', async function(){
         let json = {
@@ -61,6 +76,5 @@ export async function formAdminComponent({table,modal,action}){
         let response = await res.json()
         console.log(response);
     });
-
     open_modal(modal);
 }

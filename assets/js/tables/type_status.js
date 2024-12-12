@@ -11,7 +11,8 @@ export const TAB_TYPE_STATUS = {
             name:"id_type_status",
             title:"ID Estatus",
             primary: true,
-            default: true
+            default: true,
+            select:true
         },
         name:{
             name:"name",

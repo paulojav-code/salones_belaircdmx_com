@@ -11,7 +11,8 @@ export const TAB_SALONES = {
             name:"id_salones",
             title:"ID Salones",
             primary: true,
-            default: true
+            default: true,
+            select:true
         },
         name:{
             name:"name",

@@ -11,11 +11,13 @@ export const TAB_EVENTOS_INFO = {
             name:"id_eventos_info",
             title:"ID Info Eventos",
             primary: true,
-            default: true
+            default: true,
+            select:true
         },
         id_eventos:{
             name:"id_eventos",
             title:"ID Eventos",
+            select:true
         },
         id_salones:{
             name:"id_salones",

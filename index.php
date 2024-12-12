@@ -1,8 +1,6 @@
 <?php
     include_once('api/includes/php/functions.php');
     include_once('includes/php/connection.php');
-    $sql = 'SELECT * FROM itinerario WHERE active = 1';
-    $res = query($con,$sql);
 ?>
 
 <!DOCTYPE html>

@@ -11,15 +11,18 @@ export const TAB_ITINERARIO = {
             name:"id_itinerario",
             title:"ID Itinerario",
             primary: true,
-            default: true
+            default: true,
+            select:true
         },
         id_salones:{
             name:"id_salones",
             title:"ID Salones",
+            select:true
         },
         id_eventos:{
             name:"id_eventos",
             title:"ID Eventos",
+            select:true
         },
         name:{
             name:"name",
