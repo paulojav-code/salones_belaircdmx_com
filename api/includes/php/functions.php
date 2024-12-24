@@ -124,7 +124,7 @@
         }
         
         $sql = 'INSERT INTO '.DATABASE_NAME.'.`'.$t['name'].'` ('.implode(', ',$values).') VALUES ('.implode(', ',$insert).');';
-        echo (json_encode($params));
+        // echo (json_encode($params));
         $res = query($con,$sql,$params);
 
         if(isset($res['error'])){

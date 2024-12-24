@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     justify-content: center;
     & .select_container{
-        width: 15em;
+        width: 17em;
     }
 }
 #modal_f article{
@@ -35,11 +35,13 @@
         width: 100%;
         border: 2px #000 solid;
         border-radius: 0.5em;
+        padding: 0.5em;
     }
     & select{
         width: 100%;
         border: 2px #000 solid;
         border-radius: 0.5em;
+        padding: 0.5em;
     }
 }
 .modal_buttons{

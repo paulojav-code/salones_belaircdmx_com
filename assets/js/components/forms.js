@@ -1,6 +1,6 @@
 import { LS_VAR_LOGIN,URL_API_LOGIN_SALONES } from "../const.js";
 import { open_modal, close_modals } from './modals.js';
-import { request_api } from "../utils.js";
+import { request_api,get_foreign_data } from "../utils.js";
 
 let jwt = JSON.parse(localStorage.getItem(LS_VAR_LOGIN));
 
@@ -19,20 +19,21 @@ export async function formAdminComponent({table,modal,action}){
     }
     //respuesa con la lista de los datos que trae el select de la tabla
     let inputs_data = await request_api({url:URL_API_LOGIN_SALONES,json:json_input})
-    console.log(inputs_data)
+    // console.log(inputs_data)
+
     let tab = table;
     let act = action_list[action]
 
     // crea los inputs con lo la informacion que trae las tablas de js que se hicieron previamente
     let body = Object.keys(tab.columns).map(c => {
-        console.log(tab.columns[c].name)
+        console.log(c)
         let input_body = ""
         
         if(tab.columns[c].select == true){
             input_body = `<div class="select_container"><article><label>${tab.columns[c].title}</label><select id="e-${c}" class="input_form"></select></article></div>`;
         }
         else if (tab.columns[c].name == "date") {
-            input_body = `<div><article><label>${tab.columns[c].title}</label><input type="date" id="e-${c}" class="input_form"></input></article></div>`;
+            input_body = `<div><article><label>${tab.columns[c].title}</label><input type="datetime-local" id="e-${c}" class="input_form"></input></article></div>`;
         }
         else{
             input_body = `<div><article><label>${tab.columns[c].title}</label><input id="e-${c}" class="input_form"></input></article></div>`;
@@ -56,9 +57,29 @@ export async function formAdminComponent({table,modal,action}){
     document.querySelector(`#${modal} .cancel`).addEventListener('click',function(){
         close_modals(modal)
     });
-    document.querySelectorAll(".input_form").forEach(i => {
-        // console.log(i.id)
+    
+    document.querySelectorAll(".select_container select").forEach( async (i) =>  {
+        let input_id  = i.id.split("-")[1]
+        let foreign = tab.columns[input_id].foreign
+        let res = await get_foreign_data({
+            url:URL_API_LOGIN_SALONES,
+            id:foreign.id,
+            column:foreign.column,
+            json:{
+                token: jwt.token,
+                action: 'select',
+                table: foreign.table
+            }
+        })
+        // console.log(res)
+        res.forEach(r => {
+            let opt = document.createElement('option')
+            opt.text = r.name;
+            opt.value = r.id;
+            i.appendChild(opt);
+        });
     });
+
     document.querySelector(`#${modal} .send`).addEventListener('click', async function(){
         let json = {
             id:tab.id,
@@ -74,7 +95,7 @@ export async function formAdminComponent({table,modal,action}){
         });
         let res = await request_api({url:URL_API_LOGIN_SALONES,json:json})
         let response = await res.json()
-        console.log(response);
+        if(act == "insert"){alert("Se guardo la informacion correctamenete")}
     });
     open_modal(modal);
 }

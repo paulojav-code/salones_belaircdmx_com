@@ -1,22 +1,22 @@
-export const TAB_SALONES = {
-    name: "salones",
-	id: "id_salones",
+export const TAB_TYPE_EVENTOS = {
+    name: "type_eventos",
+	id: "id_type_eventos",
 	title: {
-		table: "Salones",
-		insert: "Nuevo Salon",
-		update: "Modificar Salon"
+		table: "Tipo Eventos",
+		insert: "Nuevo Tipo Evento",
+		update: "Modificar Tipo Evento"
 	},
     columns:{
-        id_salones:{
-            name:"id_salones",
-            title:"ID Salones",
+        id_type_eventos:{
+            name:"id_type_eventos",
+            title:"Tipo de Evento",
             primary: true,
             default: true,
             select:true,
             type: 'foreign',
             foreign: {
-				table: 'salones',
-				id: 'id_salones',
+				table: 'type_eventos',
+				id: 'id_type_eventos',
 				column: 'name'
 			}
         },
@@ -29,6 +29,5 @@ export const TAB_SALONES = {
             title:"Activo",
             default: true
         }
-        
     }
 }

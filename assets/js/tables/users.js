@@ -12,12 +12,24 @@ export const TAB_USUARIOS = {
             title:"ID Usuarios",
             primary: true,
             default: true,
-            select:true
+            select:true,
+            type: 'foreign',
+            foreign: {
+				table: 'users',
+				id: 'id_users',
+				column: 'username'
+			}
         },
         id_type_users:{
             name:"id_type_users",
             title:"ID tipo de usuario",
-            select:true
+            select:true,
+            type: 'foreign',
+            foreign: {
+				table: 'type_users',
+				id: 'id_type_users',
+				column: 'name'
+			}
         },
         username:{
             name:"username",

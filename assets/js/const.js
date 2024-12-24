@@ -19,7 +19,7 @@ export const TEMP_URL_ROOT_IMG = `../assets/img/pages/`;
 // }
 
 export const SERVICES_LIST = [
-    {title:'Eventos Info',url:'./eventos_info/',class_name:'eventos_info'},
+    {title:'Eventos',url:'./eventos/',class_name:'eventos'},
     {title:'Salones',url:'./salones/',class_name:'salones'},
     {title:'Usuarios',url:'./usuarios/',class_name:'usuarios'}
 ];
