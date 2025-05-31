@@ -1,0 +1,1 @@
+{"name":"salones","id":"id_salones","columns":{"id_salones":{"name":"id_salones","var":"i","default":true},"name":{"name":"name","var":"s","length":50},"active":{"name":"active","var":"i","default":true}}}

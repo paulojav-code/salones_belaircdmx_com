@@ -1,0 +1,1 @@
+{"name":"type_status","id":"id_type_status","columns":{"id_type_status":{"name":"id_type_status","var":"i","default":true},"name":{"name":"name","var":"s","length":50},"active":{"name":"active","var":"i","default":true}}}

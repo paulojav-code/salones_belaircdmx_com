@@ -1,25 +1,11 @@
 ###
-POST http://localhost/web/salones_belaircdmx_com/api/salones/ HTTP/1.1
+POST http://localhost/web/salones_belaircdmx_com/api/events/ HTTP/1.1
 content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzQ4MTMxODQ2fQ.zEhgBTPlv4jn7esLqQUrvruVLchy_eFmBGwJZLUe_Y8
 
 {
-    "id": "id_eventos",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MSwiZXhwIjoxNzM0NDY0ODU3fQ.0k1_bpLYJx1yGKuoW1SCsJnr_bigMrdoT8HZVX1uHeE",
-    "action": "insert",
-    "table": "eventos",
-    "columns": {
-        "id_type_eventos": "1",
-        "id_salones": "1",
-        "id_type_status": "1",
-        "date": "2024-12-11T14:47"
+    "action": "select",
+    "table": "users",
+    "options": {
     }
-}
-
-###
-POST http://localhost/web/salones_belaircdmx_com/api/login/ HTTP/1.1
-content-type: application/json
-
-{
-    "username":"aux_develop",
-    "password":"root"
 }

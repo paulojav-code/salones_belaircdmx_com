@@ -1,0 +1,1 @@
+{"name":"users","id":"id_users","columns":{"id_users":{"name":"id_users","var":"i","default":true},"id_type_users":{"name":"id_type_users","var":"i","foreign_key":{"table":"type_users","column":"id_type_users"}},"username":{"name":"username","var":"s","length":50},"password":{"name":"password","var":"s","length":250},"active":{"name":"active","var":"i","default":true}}}

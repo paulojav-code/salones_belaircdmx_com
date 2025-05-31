@@ -1,0 +1,1 @@
+{"name":"eventos","id":"id_eventos","columns":{"id_eventos":{"name":"id_eventos","var":"i","default":true},"name":{"name":"name","var":"s","length":50},"date":{"name":"date","var":"dt"},"active":{"name":"active","var":"i","default":true}}}

@@ -1,0 +1,14 @@
+{
+    "login": {
+        "module": "services/login.php",
+        "function": "request_login"
+    },
+    "files": {
+        "module": "services/files.php",
+        "function": "request_files"
+    },
+    "events": {
+        "module": "events/events.php",
+        "function": "request_events"
+    }
+}

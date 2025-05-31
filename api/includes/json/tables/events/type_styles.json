@@ -1,0 +1,1 @@
+{"name":"type_styles","id":"id_type_styles","columns":{"id_type_styles":{"name":"id_type_styles","var":"i","default":true},"name":{"name":"name","var":"s","length":50},"active":{"name":"active","var":"i","default":true}}}

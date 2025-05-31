@@ -10,6 +10,10 @@ export const ADMIN = {
     'eventos':TAB_EVENTOS,
     'salones':TAB_SALONES,
     'usuarios':TAB_USUARIOS,
+    'type_status':TAB_TYPE_STATUS,
+    'type_styles':TAB_TYPE_STYLES,
+    'type_users':TAB_TYPE_USERS,
+    'type_eventos':TAB_TYPE_EVENTOS
 }
 
 export const OPTIONS = {

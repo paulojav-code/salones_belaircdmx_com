@@ -1,0 +1,1 @@
+{"name":"pantallas","id":"id_pantalla","columns":{"id_pantalla":{"name":"id_pantalla","var":"i","default":true},"id_salones":{"name":"id_salones","var":"i","foreign_key":{"table":"salones","column":"id_salones"}},"acive":{"name":"acive","var":"i","default":true}}}

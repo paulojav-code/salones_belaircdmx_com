@@ -1,0 +1,35 @@
+{
+    "000": {"status": 500, "message": "Error interno del servidor"},
+    "001": {"status": 400, "message": "Petición no proporcionada"},
+    "002": {"status": 401, "message": "Token no proporcionado"},
+    "003": {"status": 403, "message": "Formato de token inválido"},
+    "004": {"status": 400, "message": "Estructura de petición inválida"},
+    "005": {"status": 404, "message": "Ruta no encontrada"},
+    "006": {"status": 405, "message": "Método HTTP no permitido"},
+    "007": {"status": 404, "message": "Módulo no encontrado"},
+    "008": {"status": 501, "message": "Función no implementada"},
+
+    "009": {"status": 500,"message": "Error de conexión con base de datos"},
+    "010": {"status": 500,"message": "Error en ejecución de consulta SQL"},
+
+    "011": {"status": 400,"message": "ID no proporcionado"},
+    "012": {"status": 400,"message": "Campos requeridos faltantes"},
+    "013": {"status": 400,"message": "Acción no proporcionada"},
+    "014": {"status": 400,"message": "Acción no válida"},
+    "015": {"status": 400,"message": "Tabla no proporcionada"},
+    "016": {"status": 404,"message": "Tabla no encontrada"},
+    "017": {"status": 400,"message": "Servicio no proporcionado"},
+
+    "100": {"status": 401,"message": "Sesión no activa"},
+    "101": {"status": 400,"message": "Usuario no proporcionado"},
+    "102": {"status": 404,"message": "Usuario no encontrado"},
+    "103": {"status": 401,"message": "Credenciales inválidas"},
+
+    "200": {"status": 400,"message": "Archivo no proporcionado"},
+    "201": {"status": 500,"message": "Error al copiar el archivo"},
+    "202": {"status": 500,"message": "Tipo de estilo no proporcionado"},
+    "203": {"status": 500,"message": "Pagina para estilo no proporcionada"},
+    "210": {"status": 400,"message": "Petición de clonado incorrecta"},
+    "211": {"status": 500,"message": "No se pudieron insertar los datos de la página clonada"},
+    "212": {"status": 500,"message": "No se pudieron copiar los archivos de la página clonada"}
+}

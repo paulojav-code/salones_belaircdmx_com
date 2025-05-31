@@ -1,0 +1,13 @@
+{
+    "1":{
+        "NAME":"events",
+        "DATABASE":"db_cdmx_hotel",
+        "FLAGS":{
+            "select":"EVENTS_SELECT",
+            "insert":"EVENTS_INSERT",
+            "update":"EVENTS_UPDATE",
+            "delete":"EVENTS_DELETE",
+            "foreign":""
+        }
+    }
+}

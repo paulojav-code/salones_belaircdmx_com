@@ -61,7 +61,7 @@ export function back_home(){
 export async function get_foreign_data({url,json,id,column}){
     let data = await request_api({url:url,json:json});
     let res = data.map(d=>{
-        // console.log(data)
+        // console.log(json)
         return {
             id:d[id],
             name:d[column]

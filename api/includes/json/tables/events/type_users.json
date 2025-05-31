@@ -1,0 +1,1 @@
+{"name":"type_users","id":"id_type_users","columns":{"id_type_users":{"name":"id_type_users","var":"i","default":true},"name":{"name":"name","var":"s","length":50},"active":{"name":"active","var":"i","default":true}}}

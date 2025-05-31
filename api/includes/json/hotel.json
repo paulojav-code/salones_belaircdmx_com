@@ -1,0 +1,346 @@
+{
+    "type_users": {
+        "name": "type_users",
+        "id": "id_type_users",
+        "columns": {
+            "id_type_users": {
+                "name": "id_type_users",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s",
+                "length": 50
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "type_styles": {
+        "name": "type_styles",
+        "id": "id_type_styles",
+        "columns": {
+            "id_type_styles": {
+                "name": "id_type_styles",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s",
+                "length": 50
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "type_status": {
+        "name": "type_status",
+        "id": "id_type_status",
+        "columns": {
+            "id_type_status": {
+                "name": "id_type_status",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s",
+                "length": 50
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "users": {
+        "name": "users",
+        "id": "id_users",
+        "columns": {
+            "id_users": {
+                "name": "id_users",
+                "var": "i",
+                "default": true
+            },
+            "id_type_users": {
+                "name": "id_type_users",
+                "var": "i",
+                "foreign_key": {
+                    "table": "type_users",
+                    "column": "id_type_users"
+                }
+            },
+            "username": {
+                "name": "username",
+                "var": "s",
+                "length": 50
+            },
+            "password": {
+                "name": "password",
+                "var": "s",
+                "length": 250
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "salones": {
+        "name": "salones",
+        "id": "id_salones",
+        "columns": {
+            "id_salones": {
+                "name": "id_salones",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s",
+                "length": 50
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "pantallas": {
+        "name": "pantallas",
+        "id": "id_pantalla",
+        "columns": {
+            "id_pantalla": {
+                "name": "id_pantalla",
+                "var": "i",
+                "default": true
+            },
+            "id_salones": {
+                "name": "id_salones",
+                "var": "i",
+                "foreign_key": {
+                    "table": "salones",
+                    "column": "id_salones"
+                }
+            },
+            "acive": {
+                "name": "acive",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "eventos_log": {
+        "name": "eventos_log",
+        "id": "id_services_log",
+        "columns": {
+            "id_log": {
+                "name": "id_log",
+                "var": "i",
+                "default": true
+            },
+            "id_users": {
+                "name": "id_users",
+                "var": "i",
+                "foreign_key": {
+                    "table": "users",
+                    "column": "id_users"
+                }
+            },
+            "id_type_flags": {
+                "name": "id_type_flags",
+                "var": "i",
+                "foreign_key": {
+                    "table": "type_flags",
+                    "column": "id_type_flags"
+                }
+            },
+            "log": {
+                "name": "log",
+                "var": "t"
+            },
+            "date": {
+                "name": "date",
+                "var": "dt"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "users_permisos": {
+        "name": "users_permisos",
+        "id": "id_users_permissions",
+        "columns": {
+            "id_users_permissions": {
+                "name": "id_users_permissions",
+                "var": "i",
+                "default": true
+            },
+            "id_users": {
+                "name": "id_users",
+                "var": "i",
+                "foreign_key": {
+                    "table": "users",
+                    "column": "id_users"
+                }
+            },
+            "id_type_services": {
+                "name": "id_type_services",
+                "var": "i",
+                "foreign_key": {
+                    "table": "type_services",
+                    "column": "id_type_services"
+                }
+            },
+            "permissions": {
+                "name": "permissions",
+                "var": "t"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "eventos": {
+        "name": "eventos",
+        "id": "id_eventos",
+        "columns": {
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i",
+                "default": true
+            },
+            "name": {
+                "name": "name",
+                "var": "s",
+                "length": 50
+            },
+            "date": {
+                "name": "date",
+                "var": "dt"
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "eventos_info": {
+        "name": "eventos_info",
+        "id": "id_evento_info",
+        "columns": {
+            "id_evento_info": {
+                "name": "id_evento_info",
+                "var": "i",
+                "default": true
+            },
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i",
+                "foreign_key": {
+                    "table": "eventos",
+                    "column": "id_eventos"
+                }
+            },
+            "id_type_status": {
+                "name": "id_type_status",
+                "var": "i",
+                "foreign_key": {
+                    "table": "type_status",
+                    "column": "id_type_status"
+                }
+            },
+            "descripcion": {
+                "name": "descripcion",
+                "var": "s",
+                "length": 300
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "eventos_salones": {
+        "name": "evenos_salones",
+        "id": "id_eventos_salones",
+        "columns": {
+            "id_eventos_salones": {
+                "name": "id_eventos_salones",
+                "var": "i",
+                "default": true
+            },
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i",
+                "foreign_key": {
+                    "table": "eventos",
+                    "column": "id_eventos"
+                }
+            },
+            "id_salones": {
+                "name": "id_salones",
+                "var": "i",
+                "foreign_key": {
+                    "table": "salones",
+                    "column": "id_salones"
+                }
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    },
+    "eventos_pantallas": {
+        "name": "eventos_pantallas",
+        "id": "id_eventos_pantallas",
+        "columns": {
+            "id_eventos_pantallas": {
+                "name": "id_eventos_pantallas",
+                "var": "i",
+                "default": true
+            },
+            "id_eventos": {
+                "name": "id_eventos",
+                "var": "i",
+                "foreign_key": {
+                    "table": "eventos",
+                    "column": "id_eventos"
+                }
+            },
+            "id_pantallas": {
+                "name": "id_pantallas",
+                "var": "i",
+                "foreign_key": {
+                    "table": "pantallas",
+                    "column": "id_pantalla"
+                }
+            },
+            "active": {
+                "name": "active",
+                "var": "i",
+                "default": true
+            }
+        }
+    }
+}
